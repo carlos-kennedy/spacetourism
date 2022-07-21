@@ -336,6 +336,7 @@ a {
 }
 
 .nav-auto * {
+  height: 2rem;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 1.4rem;
   line-height: 1.7rem;
@@ -343,17 +344,16 @@ a {
   text-transform: uppercase;
   color: var(--text-label);
 
-  cursor: pointer;
-
-  transition: padding-bottom 0.7s;
+  transition: padding-bottom 0.8s;
 }
 
-.nav-auto .auto-btn1:hover,
+.auto-btn1:hover,
 .auto-btn2:hover,
 .auto-btn3:hover,
 .auto-btn4:hover {
   padding-bottom: 0.8rem;
   border-bottom: 0.3rem solid hsl(0 0% 100% / 0.5);
+  cursor: pointer;
 }
 
 #radio1:checked ~ .nav-auto .auto-btn1,
