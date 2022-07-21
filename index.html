@@ -11,25 +11,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title>SpaceTourism</title>
+    <script src="./main.js" defer></script>
 </head>
 
 <body>
 
-    <nav>
-        <a href="#" class="logo">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" fill="white" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M20 0C20 0 20 20 0 20C19.648 20.1428 20 40 20 40C20 40 20 20 39.9999 20C20 20 20 0 20 0Z"
-                    fill="#0B0D17" />
-            </svg>
-        </a>
+    <nav id="navigation" class="primary-navigation">
+        <div class="wrapper">
 
+            <a href="#" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="20" fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20 0C20 0 20 20 0 20C19.648 20.1428 20 40 20 40C20 40 20 20 39.9999 20C20 20 20 0 20 0Z"
+                        fill="#0B0D17" />
+                </svg>
+            </a>
+
+            <button aria-controls="navigation" aria-expanded="false" aria-label="Abrir Menu"
+                class="open-menu-mobile unactive">
+                <svg width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="3" fill="#D0D6F9" />
+                    <rect y="9" width="24" height="3" fill="#D0D6F9" />
+                    <rect y="18" width="24" height="3" fill="#D0D6F9" />
+                </svg>
+
+            </button>
+
+            <button aria-controls="navigation" aria-expanded="false" aria-label="Fechar Menu"
+                class="close-menu-mobile unactive">
+                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2.5752" y="0.954102" width="24" height="3" transform="rotate(45 2.5752 0.954102)"
+                        fill="#D0D6F9" />
+                    <rect x="0.454102" y="17.9246" width="24" height="3" transform="rotate(-45 0.454102 17.9246)"
+                        fill="#D0D6F9" />
+                </svg>
+
+            </button>
+
+            <div class="menu" data-visible="false">
+                <ul class="nav-list">
+                    <li><span>00</span> <a href="#">home</a></li>
+                    <li><span>01</span> <a href="#destination">destination</a></li>
+                    <li><span>02</span> <a href="#">crew</a></li>
+                    <li><span>03</span> <a href="#">technology</a></li>
+                </ul>
+            </div>
+
+
+        </div>
     </nav>
 
     <main>
 
-        <section id="home">
+        <section id="home" class="explorer">
             <div class="wrapper">
 
                 <header>
@@ -50,7 +85,186 @@
             </div>
         </section>
 
+
+        <section id="destination" class="destinations">
+            <div class="wrapper">
+
+                <!-- sliders s -->
+                <div class="slider">
+
+                    <div class="slides">
+                        <!-- radio button s -->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <!-- radio button e -->
+                        <!-- slider img s -->
+                        <div class="slide first">
+                            <header>
+                                <h3>
+                                    <span>01</span> Pick your destination
+                                </h3>
+
+                                <img src="assets/moon.png" alt="Lua" />
+                            </header>
+
+                            <!-- manua slider s -->
+                            <!-- <div class="nav-manual">
+                                <label for="radio1" class="manual-btn">moon</label>
+                                <label for="radio2" class="manual-btn">mars</label>
+                                <label for="radio3" class="manual-btn">europa</label>
+                                <label for="radio4" class="manual-btn">titan</label>
+                            </div> -->
+                            <!-- manua slider e -->
+
+                            <div class="content">
+                                <h2>Moon</h2>
+                                <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help
+                                    regain perspective and come back
+                                    refreshed. While you’re there, take in some history by visiting the Luna 2 and
+                                    Apollo 11 landing sites.</p>
+                            </div>
+                            <div class="info">
+                                <h3>avg. distance</h3>
+                                <h2>384,400 km</h2>
+                            </div>
+
+                            <div class="info">
+                                <h3>Est. travel time</h3>
+                                <h2>3 days</h2>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <header>
+                                <h3>
+                                    <span>02</span> Pick your destination
+                                </h3>
+
+                                <img src="assets/mars.png" alt="Marte" />
+
+                                <!-- <div class="nav-manual">
+                                    <label for="radio1" class="manual-btn">moon</label>
+                                    <label for="radio2" class="manual-btn">mars</label>
+                                    <label for="radio3" class="manual-btn">europa</label>
+                                    <label for="radio4" class="manual-btn">titan</label>
+                                </div> -->
+                            </header>
+
+                            <div class="content">
+                                <h2>Mars</h2>
+                                <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the
+                                    tallest planetary mountain in our
+                                    solar system. It’s two and a half times the size of Everest!</p>
+                            </div>
+                            <div class="info">
+                                <h3>avg. distance</h3>
+                                <h2>225 MIL. km</h2>
+                            </div>
+
+                            <div class="info">
+                                <h3>Est. travel time</h3>
+                                <h2>9 months</h2>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <header>
+                                <h3>
+                                    <span>03</span> Pick your destination
+                                </h3>
+
+                                <img src="assets/europa.png" alt="Europa" />
+
+                                <!-- <div class="nav-manual">
+                                    <label for="radio1" class="manual-btn">moon</label>
+                                    <label for="radio2" class="manual-btn">mars</label>
+                                    <label for="radio3" class="manual-btn">europa</label>
+                                    <label for="radio4" class="manual-btn">titan</label>
+                                </div> -->
+                            </header>
+
+                            <div class="content">
+                                <h2>Europa</h2>
+                                <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s
+                                    dream. With an icy surface, it’s
+                                    perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug
+                                    wintery cabin.</p>
+                            </div>
+                            <div class="info">
+                                <h3>avg. distance</h3>
+                                <h2>628 MIL. km</h2>
+                            </div>
+
+                            <div class="info">
+                                <h3>Est. travel time</h3>
+                                <h2>3 years</h2>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <header>
+                                <h3>
+                                    <span>04</span> Pick your destination
+                                </h3>
+
+                                <img src="assets/titan.png" alt="Titan" />
+
+                                <!-- <div class="nav-manual">
+                                    <label for="radio1" class="manual-btn">moon</label>
+                                    <label for="radio2" class="manual-btn">mars</label>
+                                    <label for="radio3" class="manual-btn">europa</label>
+                                    <label for="radio4" class="manual-btn">titan</label>
+                                </div> -->
+                            </header>
+
+                            <div class="content">
+                                <h2>Titan</h2>
+                                <p>The only moon known to have a dense atmosphere other than Earth, Titan is a home away
+                                    from home (just a few hundred
+                                    degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+                            </div>
+                            <div class="info">
+                                <h3>avg. distance</h3>
+                                <h2>1.6 BIL. km</h2>
+                            </div>
+
+                            <div class="info">
+                                <h3>Est. travel time</h3>
+                                <h2>7 years</h2>
+                            </div>
+                        </div>
+                        <!-- slider img e -->
+                        <!-- automatic slider s -->
+                        <div class="nav-auto">
+                            <label for="radio1" class="auto-btn1">moon</label>
+                            <label for="radio2" class="auto-btn2">mars</label>
+                            <label for="radio3" class="auto-btn3">europa</label>
+                            <label for="radio4" class="auto-btn4">titan</label>
+                        </div>
+                        <!-- automatic slider e -->
+                    </div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+                <!-- automatic slider e -->
+            </div>
+            </div>
+
+            </div>
+
+            <!-- sliders e -->
+            </div>
+        </section>
     </main>
+
+    <!-- 
+                            <div class="input-sliders">
+                               
+                            </div>
+
+ -->
 </body>
 
 </html>
