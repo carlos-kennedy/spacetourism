@@ -18,7 +18,7 @@ navButtonOpen.addEventListener("click", () => {
 
   if (visibility === "false") {
     primaryNav.setAttribute("data-visible", true);
-    navButtonOpen.setAttribute("aria-expanded", true);
+    navButtonOpen.setAttribute("aria-expanded", false);
     navButtonClose.setAttribute("aria-expanded", true);
   }
 });
@@ -26,8 +26,6 @@ navButtonOpen.addEventListener("click", () => {
 // close
 navButtonClose.addEventListener("click", () => {
   const visibility = primaryNav.getAttribute("data-visible");
-
-  primaryNav.setAttribute("data-visible", true);
 
   navButtonOpen.classList.remove("unactive");
   navButtonOpen.setAttribute("aria-expanded", true);
@@ -37,7 +35,6 @@ navButtonClose.addEventListener("click", () => {
 
   if (visibility === "true") {
     primaryNav.setAttribute("data-visible", false);
-    navButtonOpen.setAttribute("aria-expanded", false);
     navButtonClose.setAttribute("aria-expanded", false);
   }
 });

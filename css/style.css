@@ -27,10 +27,28 @@ html {
   scroll-behavior: smooth;
 }
 
+section h3,
+section h2 {
+  color: var(--font-tl);
+}
+section h3,
+section p {
+  color: var(--text-label);
+}
+
+section p {
+  color: var(--font-ph);
+}
+
 .wrapper {
-  display: flex;
   margin-inline: auto;
+  padding-top: 8rem;
+  padding-bottom: 4.8rem;
   padding-inline: 2.4rem;
+
+  display: flex;
+
+  text-align: center;
 }
 
 a {
@@ -40,14 +58,19 @@ a {
 /* =====NAV======= */
 
 .primary-navigation .wrapper {
+  padding-block: 0;
+
   display: flex;
   justify-content: space-between;
+
+  text-align: start;
 }
 
 .primary-navigation .nav-list {
+  margin-block-start: 11.8rem;
+
   display: flex;
   flex-direction: column;
-  margin-block-start: 11.8rem;
   gap: 3.2rem;
 
   font-family: "Barlow Condensed", sans-serif;
@@ -57,14 +80,16 @@ a {
 }
 
 .primary-navigation .menu {
-  position: fixed;
-  inset: 0 0 0 30%;
   padding: 3.2rem;
+  inset: 0 0 0 30%;
+
+  position: fixed;
   z-index: 100;
 
   background: hsl(0 0% 0% / 0.75);
 
   transform: translateX(100%);
+
   transition: transform 0.8s;
 }
 
@@ -72,10 +97,10 @@ a {
   transform: translateX(0%);
 }
 
-@supports (backdrop-filter: blur(8.1rem)) {
+@supports (backdrop-filter: blur(8rem)) {
   .primary-navigation .menu {
     background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(8.1rem);
+    backdrop-filter: blur(8rem);
   }
 }
 
@@ -94,11 +119,13 @@ a {
 
 .open-menu-mobile,
 .close-menu-mobile {
-  position: fixed;
   background: transparent;
+
+  position: fixed;
   top: 2.4rem;
   right: 2.4rem;
   z-index: 101;
+
   cursor: pointer;
 }
 
@@ -111,12 +138,11 @@ a {
 .explorer .wrapper {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding-top: 8.8rem;
 }
 
 .explorer h1 {
   margin-block: 1.6rem;
+
   font-family: "Bellefair", serif;
   font-size: 8rem;
   font-weight: 400;
@@ -135,6 +161,7 @@ a {
 
 .explorer .content > p {
   margin-bottom: 8.1rem;
+
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
@@ -146,7 +173,6 @@ a {
   height: 15rem;
   width: 15rem;
   margin-inline: auto;
-  margin-bottom: 4.8rem;
 
   background: var(--font-tl);
 
@@ -161,6 +187,7 @@ a {
   line-height: 2.3rem;
   letter-spacing: 0.2rem;
   color: var(--bg-dk);
+
   transition: box-shadow 1s;
 }
 
@@ -170,13 +197,11 @@ a {
 
 /* =====DESTINATION======= */
 
-.destinations .wrapper {
-  text-align: center;
-  padding-block: 8.8rem;
+.destination .wrapper {
   background: url(/assets/sliders-bg.png) no-repeat center / cover fixed;
 }
 
-.destinations .slider h3 {
+.destination header h3 {
   font-family: "Barlow Condensed", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -184,33 +209,33 @@ a {
   line-height: 1.9rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
-  text-align: center;
   color: var(--font-ph);
 }
 
-.destinations .slider span {
-  margin-inline-end: 1.8rem;
+.destination .slider span {
+  margin-inline-end: 1.6rem;
+
   opacity: 0.25;
 }
 
-.destinations .slider img {
+.destination .slider img {
   width: 17rem;
   margin-top: 3.2rem;
   margin-bottom: 2.6rem;
 }
 
-.destinations .content h2 {
+.destination .content h2 {
   margin-top: 4.6rem;
+
   font-family: "Bellefair", serif;
   font-weight: 400;
   font-size: 5.6rem;
   line-height: 6.4rem;
-  text-align: center;
   text-transform: uppercase;
   color: var(--font-tl);
 }
 
-.destinations .content p {
+.destination .content p {
   padding-bottom: 3.2rem;
 
   border-bottom: 0.1rem solid hsl(0 0% 100% / 0.25);
@@ -220,7 +245,7 @@ a {
   color: var(--text-label);
 }
 
-.destinations .info h3 {
+.destination .info h3 {
   padding-top: 3.2rem;
   padding-bottom: 1.2rem;
 
@@ -228,27 +253,28 @@ a {
   font-size: 1.4rem;
   line-height: 1.7rem;
 
-  text-align: center;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
+  color: var(--text-label);
 }
-.destinations .info h2 {
+.destination .info h2 {
   font-family: "Bellefair", serif;
   font-weight: 400;
   font-size: 2.8rem;
   line-height: 3.2rem;
 
-  text-align: center;
   text-transform: uppercase;
   color: var(--font-tl);
 }
+
+/* ==sliders== */
 
 .slides [type="radio"] {
   display: none;
 }
 
 .slider {
-  width: 80rem;
+  width: 100vw;
   height: 100%;
 
   overflow: hidden;
@@ -277,53 +303,20 @@ a {
   filter: brightness(1.2);
 }
 
-/* css for mmanual inputs */
-
-.navigation-manual {
-  position: absolute;
-  width: 100%;
-  display: flex;
-}
-
-.manual-btn {
-  margin-inline-start: 2.6rem;
-
-  padding-bottom: 0.8rem;
-
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.7rem;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  color: var(--text-label);
-
-  cursor: pointer;
-  transition: filter 0.6s;
-}
-
-.manual-btn:nth-child(1) {
-  margin-inline-start: 0;
-}
-
-.manual-btn:hover {
-  filter: brightness(2.5);
-  filter: drop-shadow(0 0 1rem var(--font-tl));
-}
-
-#radio1:checked ~ .first {
+#radio-moon:checked ~ .first {
   margin-left: 0;
 }
-#radio2:checked ~ .first {
+#radio-mars:checked ~ .first {
   margin-left: -20%;
 }
-#radio3:checked ~ .first {
+#radio-europa:checked ~ .first {
   margin-left: -40%;
 }
-#radio4:checked ~ .first {
+#radio-titan:checked ~ .first {
   margin-left: -60%;
 }
 
-.nav-auto {
+.destination .nav-manual {
   width: 90%;
   margin-top: 25rem;
 
@@ -335,7 +328,7 @@ a {
   gap: 2.6rem;
 }
 
-.nav-auto * {
+.destination .nav-manual * {
   height: 2rem;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 1.4rem;
@@ -344,24 +337,344 @@ a {
   text-transform: uppercase;
   color: var(--text-label);
 
-  transition: padding-bottom 0.8s;
+  transition: padding-bottom 0.5s;
 }
 
-.auto-btn1:hover,
-.auto-btn2:hover,
-.auto-btn3:hover,
-.auto-btn4:hover {
+.destination .btn-moon:hover,
+.destination .btn-mars:hover,
+.destination .btn-europa:hover,
+.destination .btn-titan:hover {
   padding-bottom: 0.8rem;
   border-bottom: 0.3rem solid hsl(0 0% 100% / 0.5);
+
+  filter: brightness(2.5);
   cursor: pointer;
 }
 
-#radio1:checked ~ .nav-auto .auto-btn1,
-#radio2:checked ~ .nav-auto .auto-btn2,
-#radio3:checked ~ .nav-auto .auto-btn3,
-#radio4:checked ~ .nav-auto .auto-btn4 {
+#radio-moon:checked ~ .nav-manual .btn-moon,
+#radio-mars:checked ~ .nav-manual .btn-mars,
+#radio-europa:checked ~ .nav-manual .btn-europa,
+#radio-titan:checked ~ .nav-manual .btn-titan {
   padding-bottom: 0.8rem;
 
-  filter: brightness(2.5);
   border-bottom: 0.3rem solid var(--font-tl);
 }
+
+/* =====CREW======= */
+
+.crew .wrapper {
+  background: url(/assets/bg-crew.png) no-repeat center / cover fixed;
+}
+
+.crew .number {
+  margin-inline-end: 1.6rem;
+
+  opacity: 0.25;
+}
+
+.crew header h3 {
+  padding-bottom: 3.2rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.crew img {
+  width: fit-content;
+  height: 22rem;
+  margin-bottom: -0.3rem;
+}
+
+.crew .content h2 {
+  padding-top: 0.8rem;
+  padding-bottom: 1.6rem;
+
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  text-transform: uppercase;
+  color: var(--font-tl);
+}
+
+.crew .content h3 {
+  padding-top: 6.2rem;
+
+  border-top: 0.1rem solid hsla(0, 0%, 100%, 0.444);
+
+  font-family: "Bellefair", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+}
+.crew .content p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: var(--text-label);
+}
+
+.crew .nav-manual {
+  width: 90%;
+  margin-block-start: 30rem;
+
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.crew .nav-manual * {
+  padding: 0.7rem;
+
+  background: var(--font-tl);
+
+  border-radius: 100%;
+
+  opacity: 0.17;
+
+  transition: opacity 0.9s;
+}
+
+#radio-commander:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio-mission-especialist:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio-pilot:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio-flight-engineer:checked ~ .first {
+  margin-left: -60%;
+}
+
+.crew .btn-commander:hover,
+.crew .btn-mission-especialist:hover,
+.crew .btn-pilot:hover,
+.crew .btn-flight-engineer:hover {
+  opacity: 0.5;
+
+  cursor: pointer;
+}
+
+#radio-commander:checked ~ .nav-manual .btn-commander,
+#radio-mission-especialist:checked ~ .nav-manual .btn-mission-especialist,
+#radio-pilot:checked ~ .nav-manual .btn-pilot,
+#radio-flight-engineer:checked ~ .nav-manual .btn-flight-engineer {
+  opacity: 1;
+}
+
+/* =====TECHNOLOGY======= */
+
+.technology .wrapper {
+  padding-inline: 0;
+  background: url(/assets/bg-technology.png) no-repeat center / cover fixed;
+
+  text-align: center;
+}
+
+.technology span {
+  margin-inline-end: 1.6rem;
+
+  opacity: 0.25;
+}
+
+.technology header h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.technology img {
+  margin-left: -2.3rem;
+
+  width: 37.7rem;
+  padding-top: 3.4rem;
+  padding-bottom: 10rem;
+}
+
+.technology .content,
+.technology header {
+  padding-inline: 2.4rem;
+}
+
+.technology h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.technology .content h2 {
+  padding-top: 0.9rem;
+  padding-bottom: 1.6rem;
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.technology .content p {
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.technology .nav-manual {
+  width: 100%;
+  margin-block-start: 24rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.technology .nav-manual * {
+  font-family: "Bellefair", serif;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0.1rem solid hsl(0 0% 100% / 0.25);
+  border-radius: 100%;
+
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--font-tl);
+  cursor: pointer;
+  transition: background 0.8s;
+}
+
+#radio-vehicle-lauch:checked ~ .first {
+  margin-left: 0;
+}
+#radio-spaceport:checked ~ .first {
+  margin-left: -20%;
+}
+#radio-capsule:checked ~ .first {
+  margin-left: -40%;
+}
+
+.technology .btn-vehicle-lauch:hover,
+.technology .btn-spaceport:hover,
+.technology .btn-capsule:hover {
+  border: 0.1rem solid hsl(0 0% 100% / 1);
+
+  cursor: pointer;
+}
+
+#radio-vehicle-lauch:checked ~ .nav-manual .btn-vehicle-lauch,
+#radio-spaceport:checked ~ .nav-manual .btn-spaceport,
+#radio-capsule:checked ~ .nav-manual .btn-capsule {
+  background: var(--font-tl);
+  color: var(--bg-dk);
+}
+
+/* ==large-screen-smartphone */
+@media (min-width: 390px) {
+  .technology img {
+    width: 43rem;
+    height: auto;
+  }
+
+  .technology .nav-manual {
+    margin-block-start: 26rem;
+  }
+}
+
+/* ==tablet== */
+@media (min-width: 768px) {
+  .wrapper {
+    padding-inline: 3.8rem;
+  }
+
+  .col-b {
+    grid-area: B;
+  }
+
+  .col-a {
+    grid-area: A;
+  }
+
+  .content p {
+    margin-inline: auto;
+
+    width: min(57.3rem, 100%);
+  }
+
+  .destination .nav-manual {
+    width: 90%;
+  }
+
+  .destination .slider img {
+    width: 30rem;
+    margin-top: 3.2rem;
+    margin-bottom: 8.7rem;
+  }
+
+  .destination .nav-manual {
+    margin-block-start: 40rem;
+    gap: 3.5rem;
+  }
+
+  .destination .content h2 {
+    font-weight: 400;
+    font-size: 8rem;
+    line-height: 9.2rem;
+  }
+
+  .crew .nav-manual {
+    width: 90%;
+  }
+
+  .technology img {
+    width: min-content;
+    height: auto;
+  }
+
+  .technology .nav-manual {
+    margin-top: 40rem;
+  }
+
+  .technology .content {
+    padding-inline: 3.8rem;
+  }
+
+  .info-destination {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .destination header h3,
+  .crew header h3,
+  .technology header h3 {
+    text-align: start;
+  }
+}
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
