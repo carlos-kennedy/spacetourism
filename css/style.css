@@ -16,6 +16,9 @@
   /* font-family: 'Barlow', sans-serif;
 font-family: 'Barlow Condensed', sans-serif;
 font-family: 'Bellefair', serif; */
+
+  --nav-height: 9.6rem;
+  --nav-height-mobile: 4.8rem;
 }
 
 body,
@@ -27,10 +30,10 @@ html {
   scroll-behavior: smooth;
 }
 
-section h3,
 section h2 {
   color: var(--font-tl);
 }
+
 section h3,
 section p {
   color: var(--text-label);
@@ -40,10 +43,9 @@ section p {
   color: var(--font-ph);
 }
 
-.wrapper {
+section .wrapper {
   margin-inline: auto;
-  padding-top: 8rem;
-  padding-bottom: 4.8rem;
+  padding-block: var(--nav-height-mobile);
   padding-inline: 2.4rem;
 
   display: flex;
@@ -56,10 +58,11 @@ a {
 }
 
 /* =====NAV======= */
+nav {
+  height: var(--nav-height-mobile);
+}
 
 .primary-navigation .wrapper {
-  padding-block: 0;
-
   display: flex;
   justify-content: space-between;
 
@@ -372,6 +375,16 @@ a {
   opacity: 0.25;
 }
 
+.crew .slide .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.crew .slide .content img {
+  order: -1;
+}
+
 .crew header h3 {
   padding-bottom: 3.2rem;
   font-family: "Barlow Condensed", sans-serif;
@@ -385,7 +398,7 @@ a {
 .crew img {
   width: fit-content;
   height: 22rem;
-  margin-bottom: -0.3rem;
+  border-bottom: 0.1rem solid hsla(0, 0%, 100%, 0.444);
 }
 
 .crew .content h2 {
@@ -402,8 +415,6 @@ a {
 
 .crew .content h3 {
   padding-top: 6.2rem;
-
-  border-top: 0.1rem solid hsla(0, 0%, 100%, 0.444);
 
   font-family: "Bellefair", serif;
   font-style: normal;
@@ -500,7 +511,7 @@ a {
 }
 
 .technology img {
-  margin-left: -2.3rem;
+  margin-left: -2.4rem;
 
   width: 37.7rem;
   padding-top: 3.4rem;
@@ -594,6 +605,10 @@ a {
   color: var(--bg-dk);
 }
 
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+
 /* ==large-screen-smartphone */
 @media (min-width: 390px) {
   .technology img {
@@ -608,23 +623,94 @@ a {
 
 /* ==tablet== */
 @media (min-width: 768px) {
-  .wrapper {
-    padding-inline: 3.8rem;
+  /* =====GERAL======= */
+
+  nav {
+    height: var(--nav-height);
   }
 
-  .col-b {
-    grid-area: B;
+  section .wrapper {
+    padding-block: calc(var(--nav-height) + 4rem);
+
+    padding-inline: 3.9rem;
   }
 
-  .col-a {
-    grid-area: A;
+  .destination header h3,
+  .crew header h3,
+  .technology header h3 {
+    text-align: start;
   }
 
   .content p {
     margin-inline: auto;
 
-    width: min(57.3rem, 100%);
+    width: min(59.2rem, 100%);
   }
+
+  .explorer h1 {
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-size: 15rem;
+    line-height: 15rem;
+  }
+
+  .explorer h3 {
+    font-family: "Barlow Condensed";
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+
+    letter-spacing: 0.3rem;
+  }
+
+  .explorer .content > p {
+    margin-bottom: 15.6rem;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  }
+
+  /* =====NAVIGATION======= */
+  .primary-navigation .menu .nav-list {
+    margin: 0;
+    flex-direction: row;
+    gap: 3.7rem;
+
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .primary-navigation .menu {
+    padding-inline: 4.8rem;
+    padding-block: 4rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    inset: 0 0 88% 38%;
+
+    transform: translateX(0%);
+  }
+
+  @supports (backdrop-filter: blur(8rem)) {
+    .primary-navigation .menu {
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(8rem);
+    }
+  }
+
+  .primary-navigation .menu span {
+    display: none;
+  }
+
+  .open-menu-mobile,
+  .close-menu-mobile {
+    display: none;
+  }
+
+  /* =====DESTINATION======= */
 
   .destination .nav-manual {
     width: 90%;
@@ -647,34 +733,71 @@ a {
     line-height: 9.2rem;
   }
 
-  .crew .nav-manual {
-    width: 90%;
+  .info-destination {
+    display: flex;
+    justify-content: space-around;
   }
 
+  /* =====CREW======= */
+
+  .crew .wrapper {
+    padding-bottom: 0;
+  }
+
+  .crew .nav-manual {
+    width: 90%;
+    margin-block-start: 31rem;
+  }
+
+  .crew .slide .content img {
+    width: fit-content;
+    height: 53.2rem;
+    margin-bottom: -3rem;
+    padding-top: 4rem;
+
+    border: none;
+
+    order: 1;
+  }
+
+  .crew .slide .content h3 {
+    padding-top: 4rem;
+
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-transform: uppercase;
+  }
+
+  .crew .slide .content h2 {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.6rem;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .crew .slide .content p {
+    padding-bottom: 4rem;
+
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+
+    text-align: center;
+    color: var(--text-label);
+  }
+
+  /* =====TECHNOLOGY======= */
+
   .technology img {
-    width: min-content;
+    width: fit-content;
     height: auto;
   }
 
   .technology .nav-manual {
     margin-top: 40rem;
   }
-
-  .technology .content {
-    padding-inline: 3.8rem;
-  }
-
-  .info-destination {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .destination header h3,
-  .crew header h3,
-  .technology header h3 {
-    text-align: start;
-  }
 }
-/* font-family: 'Barlow', sans-serif;
-font-family: 'Barlow Condensed', sans-serif;
-font-family: 'Bellefair', serif; */
