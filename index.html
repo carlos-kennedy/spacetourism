@@ -51,10 +51,10 @@
 
             <div class="menu" data-visible="false">
                 <ul class="nav-list">
-                    <li><span>00</span> <a href="#home">home</a></li>
-                    <li><span>01</span> <a href="#destination">destination</a></li>
-                    <li><span>02</span> <a href="#crew">crew</a></li>
-                    <li><span>03</span> <a href="#technology">technology</a></li>
+                    <li> <a href="#home"> <span>00</span> home</a></li>
+                    <li><a href="#destination"> <span>01</span> destination</a></li>
+                    <li><a href="#crew"> <span>02</span> crew</a></li>
+                    <li><a href="#technology"> <span>03</span> technology</a></li>
                 </ul>
             </div>
 
@@ -66,21 +66,29 @@
         <section id="home" class="explorer">
             <div class="wrapper">
 
-                <header>
-                    <h3>SO, YOU WANT TO TRAVEL TO</h3>
-                    <h1>SPACE</h1>
-                </header>
+                <div class="col-a">
+                    <header>
+                        <h3>SO, YOU WANT TO TRAVEL TO</h3>
+                        <h1>SPACE</h1>
+                    </header>
 
-                <div class="content">
-                    <p>
-                        Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not
-                        hover kind of on the
-                        edge of it. Well sit back, and relax because we’ll give you a truly out of this world
-                        experience!
-                    </p>
+                    <div class="content">
+                        <p>
+                            Let’s face it; if you want to go to space, you might as well genuinely go to outer space
+                            and
+                            not
+                            hover kind of on the
+                            edge of it. Well sit back, and relax because we’ll give you a truly out of this world
+                            experience!
+                        </p>
 
+                    </div>
+                </div>
+
+                <div class="col-b">
                     <a class="ball" href="#destination">EXPLORER</a>
                 </div>
+
             </div>
         </section>
 
@@ -96,118 +104,139 @@
                         <input type="radio" name="radio-btn" id="radio-europa">
                         <input type="radio" name="radio-btn" id="radio-titan">
 
-                        <div class="slide first">
-                            <header>
-                                <h3>
-                                    <span>01</span> Pick your destination
-                                </h3>
+                        <article class="slide first">
+                            <div class="col-a">
+                                <header>
+                                    <h3>
+                                        <span>01</span> Pick your destination
+                                    </h3>
+                                </header>
 
                                 <img src="assets/moon.png" alt="Lua" />
-                            </header>
 
-                            <div class="content">
-                                <h2>Moon</h2>
-                                <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help
-                                    regain perspective and come back
-                                    refreshed. While you’re there, take in some history by visiting the Luna 2 and
-                                    Apollo 11 landing sites.</p>
                             </div>
-                            <div class="info-destination">
-                                <div class="info">
-                                    <h3>avg. distance</h3>
-                                    <h2>384,400 km</h2>
-                                </div>
-                                <div class="info">
-                                    <h3>Est. travel time</h3>
-                                    <h2>3 days</h2>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="slide">
-                            <header>
-                                <h3>
-                                    <span>02</span> Pick your destination
-                                </h3>
+                            <div class="col-b">
+                                <div class="content">
+                                    <h2>Moon</h2>
+                                    <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to
+                                        help
+                                        regain perspective and come back
+                                        refreshed. While you’re there, take in some history by visiting the Luna 2 and
+                                        Apollo 11 landing sites.</p>
+                                </div>
+
+                                <div class="info-destination">
+                                    <div class="info">
+                                        <h3>avg. distance</h3>
+                                        <h2>384,400 km</h2>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Est. travel time</h3>
+                                        <h2>3 days</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="slide">
+                            <div class="col-a">
+                                <header>
+                                    <h3>
+                                        <span>02</span> Pick your destination
+                                    </h3>
+                                </header>
 
                                 <img src="assets/mars.png" alt="Marte" />
-
-                            </header>
-
-                            <div class="content">
-                                <h2>Mars</h2>
-                                <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the
-                                    tallest planetary mountain in our
-                                    solar system. It’s two and a half times the size of Everest!</p>
                             </div>
-                            <div class="info-destination">
-                                <div class="info">
-                                    <h3>avg. distance</h3>
-                                    <h2>225 MIL. km</h2>
+
+                            <div class="col-b">
+                                <div class="content">
+                                    <h2>Mars</h2>
+                                    <p>Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
+                                        the
+                                        tallest planetary mountain in our
+                                        solar system. It’s two and a half times the size of Everest!</p>
                                 </div>
-                                <div class="info">
-                                    <h3>Est. travel time</h3>
-                                    <h2>9 months</h2>
+                                <div class="info-destination">
+                                    <div class="info">
+                                        <h3>avg. distance</h3>
+                                        <h2>225 MIL. km</h2>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Est. travel time</h3>
+                                        <h2>9 months</h2>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="slide">
-                            <header>
-                                <h3>
-                                    <span>03</span> Pick your destination
-                                </h3>
-
+                        <article class="slide">
+                            <div class="col-a">
+                                <header>
+                                    <h3>
+                                        <span>03</span> Pick your destination
+                                    </h3>
+                                </header>
                                 <img src="assets/europa.png" alt="Europa" />
 
-                            </header>
-
-                            <div class="content">
-                                <h2>Europa</h2>
-                                <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s
-                                    dream. With an icy surface, it’s
-                                    perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug
-                                    wintery cabin.</p>
                             </div>
-                            <div class="info-destination">
-                                <div class="info">
-                                    <h3>avg. distance</h3>
-                                    <h2>628 MIL. km</h2>
+
+                            <div class="col-b">
+                                <div class="content">
+                                    <h2>Europa</h2>
+                                    <p>The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter
+                                        lover’s
+                                        dream. With an icy surface, it’s
+                                        perfect for a bit of ice skating, curling, hockey, or simple relaxation in your
+                                        snug
+                                        wintery cabin.</p>
                                 </div>
-                                <div class="info">
-                                    <h3>Est. travel time</h3>
-                                    <h2>3 years</h2>
+                                <div class="info-destination">
+                                    <div class="info">
+                                        <h3>avg. distance</h3>
+                                        <h2>628 MIL. km</h2>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Est. travel time</h3>
+                                        <h2>3 years</h2>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="slide">
-                            <header>
-                                <h3>
-                                    <span>04</span> Pick your destination
-                                </h3>
+                        <article class="slide">
+                            <div class="col-a">
+                                <header>
+                                    <h3>
+                                        <span>04</span> Pick your destination
+                                    </h3>
+                                </header>
 
                                 <img src="assets/titan.png" alt="Titan" />
 
-                            </header>
+                            </div>
 
-                            <div class="content">
-                                <h2>Titan</h2>
-                                <p>The only moon known to have a dense atmosphere other than Earth, Titan is a home away
-                                    from home (just a few hundred
-                                    degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
-                            </div>
-                            <div class="info-destination">
-                                <div class="info">
-                                    <h3>avg. distance</h3>
-                                    <h2>1.6 BIL. km</h2>
+                            <div class="col-b">
+                                <div class="content">
+                                    <h2>Titan</h2>
+                                    <p>The only moon known to have a dense atmosphere other than Earth, Titan is a home
+                                        away
+                                        from home (just a few hundred
+                                        degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
                                 </div>
-                                <div class="info">
-                                    <h3>Est. travel time</h3>
-                                    <h2>7 years</h2>
+                                <div class="info-destination">
+                                    <div class="info">
+                                        <h3>avg. distance</h3>
+                                        <h2>1.6 BIL. km</h2>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Est. travel time</h3>
+                                        <h2>7 years</h2>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
                         <div class="nav-manual">
                             <label for="radio-moon" class="btn-moon">moon</label>
@@ -234,69 +263,94 @@
                         <input type="radio" name="radio-btn" id="radio-flight-engineer">
 
                         <div class="slide first">
-                            <header>
-                                <h3><span class="number">02</span> Meet your crew </h3>
-                            </header>
+                            <div class="col-a">
+                                <header>
+                                    <h3><span class="number">02</span> Meet your crew </h3>
+                                </header>
+                                <div class="content">
+                                    <h3>Commander</h3>
+                                    <h2>Douglas Hurley</h2>
+                                    <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and
+                                        former
+                                        NASA astronaut. He launched into
+                                        space for the third time as commander of Crew Dragon Demo-2.</p>
+                                </div>
+                            </div>
 
-                            <div class="content">
-                                <h3>Commander</h3>
-                                <h2>Douglas Hurley</h2>
-                                <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former
-                                    NASA astronaut. He launched into
-                                    space for the third time as commander of Crew Dragon Demo-2.</p>
-                                <img src="assets/douglas-hurley.png" alt="Imagem de Dougls Hurley Commander" />
+                            <div class="col-b">
+                                <img src="assets/douglas-hurley.png" alt="Imagem de Douglas Hurley Commander" />
                             </div>
                         </div>
 
                         <div class="slide">
-                            <header>
-                                <h3><span class="number">02</span> Meet your crew </h3>
-                            </header>
+                            <div class="col-a">
+                                <header>
+                                    <h3><span class="number">02</span> Meet your crew </h3>
+                                </header>
+                                <div class="content">
+                                    <h3><span class="text">Mission Specialist</span></h3>
+                                    <h2>MARK SHUTTLEWORTH</h2>
+                                    <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind
+                                        the
+                                        Linux-based Ubuntu operating
+                                        system. Shuttleworth became the first South African to travel to space as a
+                                        space
+                                        tourist.</p>
+                                </div>
+                            </div>
 
-                            <div class="content">
-                                <h3><span class="text">Mission Specialist</span></h3>
-                                <h2>MARK SHUTTLEWORTH</h2>
-                                <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the
-                                    Linux-based Ubuntu operating
-                                    system. Shuttleworth became the first South African to travel to space as a space
-                                    tourist.</p>
+                            <div class="col-b">
                                 <img src="assets/mark-shuttleworth.png"
                                     alt="Imagem de mark-shuttleworth mission especialist" />
                             </div>
                         </div>
 
                         <div class="slide">
-                            <header>
-                                <h3><span class="number">02</span> Meet your crew </h3>
-                            </header>
 
-                            <div class="content">
-                                <h3><span class="text">PILOT</span></h3>
-                                <h2>Victor Glover</h2>
-                                <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the International
-                                    Space Station. Glover is a
-                                    commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of
-                                    Expedition 64, and served as a station
-                                    systems flight engineer.</p>
+                            <div class="col-a">
+                                <header>
+                                    <h3><span class="number">02</span> Meet your crew </h3>
+                                </header>
+                                <div class="content">
+                                    <h3><span class="text">PILOT</span></h3>
+                                    <h2>Victor Glover</h2>
+                                    <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the
+                                        International
+                                        Space Station. Glover is a
+                                        commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of
+                                        Expedition 64, and served as a station
+                                        systems flight engineer.</p>
+
+                                </div>
+                            </div>
+
+                            <div class="col-b">
                                 <img src="assets/victor-glover.png" alt="Imagem de victor glover the pilot" />
                             </div>
                         </div>
 
                         <div class="slide">
-                            <header>
-                                <h3><span class="number">02</span> Meet your crew </h3>
-                            </header>
 
-                            <div class="content">
-                                <h3><span class="text">Flight Engineer</span></h3>
-                                <h2>Anousheh Ansari</h2>
-                                <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems.
-                                    Ansari was the fourth self-funded
-                                    space tourist, the first self-funded woman to fly to the ISS, and the first Iranian
-                                    in space.</p>
-                                <img src="assets/anousheh-ansari.png" alt="Imagem de Anousheh ansari" />
+                            <div class="col-a">
+                                <header>
+                                    <h3><span class="number">02</span> Meet your crew </h3>
+                                </header>
+                                <div class="content">
+                                    <h3><span class="text">Flight Engineer</span></h3>
+                                    <h2>Anousheh Ansari</h2>
+                                    <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems.
+                                        Ansari was the fourth self-funded
+                                        space tourist, the first self-funded woman to fly to the ISS, and the first
+                                        Iranian
+                                        in space.</p>
 
+                                </div>
                             </div>
+
+                            <div class="col-b">
+                                <img src="assets/anousheh-ansari.png" alt="Imagem de Anousheh ansari" />
+                            </div>
+
                         </div>
 
                         <div class="nav-manual">
@@ -319,27 +373,30 @@
             <div class="wrapper">
                 <div class="slider">
                     <div class="slides">
-                        <!-- radio button s -->
+
                         <input type="radio" name="radio-btn" id="radio-vehicle-lauch">
                         <input type="radio" name="radio-btn" id="radio-spaceport">
                         <input type="radio" name="radio-btn" id="radio-capsule">
-                        <!-- radio button e -->
 
                         <div class="slide first">
                             <header>
                                 <h3><span class="number">03</span> space launch 101</h3>
-
-                                <img src="assets/launch-vehicle.png" alt="imagem do lançamento do foguete">
-
                             </header>
 
-                            <div class="content">
-                                <h3>the terminology...</h3>
-                                <h2>launch vehicle</h2>
-                                <p> launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a
-                                    payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X
-                                    carrier rocket is the most powerful in operation. Standing 150 metres tall, it's
-                                    quite an awe-inspiring sight on the launch pad!</p>
+                            <div class="col-a">
+                                <img src="assets/launch-vehicle.png" alt="imagem do lançamento do foguete" />
+                            </div>
+
+                            <div class="col-b">
+                                <div class="content">
+                                    <h3>the terminology...</h3>
+                                    <h2>launch vehicle</h2>
+                                    <p> launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a
+                                        payload from Earth's surface to space, usually to Earth orbit or beyond. Our
+                                        WEB-X
+                                        carrier rocket is the most powerful in operation. Standing 150 metres tall, it's
+                                        quite an awe-inspiring sight on the launch pad!</p>
+                                </div>
                             </div>
                         </div>
 
@@ -354,7 +411,8 @@
                                 <h2>spaceport</h2>
                                 <p> A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by
                                     analogy to the seaport for ships or
-                                    airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally
+                                    airport for aircraft. Based in the famous Cape Canaveral, our spaceport is
+                                    ideally
                                     situated to take advantage of the
                                     Earth’s rotation for launch.</p>
                             </div>
@@ -369,7 +427,8 @@
                             <div class="content">
                                 <h3>the terminology...</h3>
                                 <h2>Space capsule</h2>
-                                <p> A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule
+                                <p> A space capsule is an often-crewed spacecraft that uses a blunt-body reentry
+                                    capsule
                                     to reenter the Earth's atmosphere
                                     without wings. Our capsule is where you'll spend your time during the flight. It
                                     includes a space gym, cinema, and

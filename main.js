@@ -4,8 +4,7 @@ const navButtonClose = document.querySelector(".close-menu-mobile");
 
 navButtonOpen.classList.remove("unactive");
 
-buttonsEvents();
-function buttonsEvents() {
+function buttonsMenu() {
   // open
   navButtonOpen.addEventListener("click", () => {
     const visibility = primaryNav.getAttribute("data-visible");
@@ -42,3 +41,4 @@ function buttonsEvents() {
   });
   return;
 }
+buttonsMenu();

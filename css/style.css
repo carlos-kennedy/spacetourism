@@ -25,8 +25,7 @@ body,
 html {
   width: 100%;
   height: 100vh;
-  background: var(--bg-dk) url(/assets/bg-space.png) no-repeat center / cover
-    fixed;
+  background: var(--bg-dk);
   scroll-behavior: smooth;
 }
 
@@ -113,7 +112,7 @@ nav {
   color: var(--font-tl);
 }
 
-.logo {
+.primary-navigation .logo {
   position: fixed;
   top: 2rem;
   left: 2rem;
@@ -139,6 +138,8 @@ nav {
 /* =====HOME======= */
 
 .explorer .wrapper {
+  background: var(--bg-dk) url(/assets/bg-space.png) no-repeat center / cover;
+
   display: flex;
   flex-direction: column;
 }
@@ -378,7 +379,6 @@ nav {
 .crew .slide .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .crew .slide .content img {
@@ -401,7 +401,7 @@ nav {
   border-bottom: 0.1rem solid hsla(0, 0%, 100%, 0.444);
 }
 
-.crew .content h2 {
+.crew .slide .content h2 {
   padding-top: 0.8rem;
   padding-bottom: 1.6rem;
 
@@ -413,7 +413,7 @@ nav {
   color: var(--font-tl);
 }
 
-.crew .content h3 {
+.crew .slide .content h3 {
   padding-top: 6.2rem;
 
   font-family: "Bellefair", serif;
@@ -749,7 +749,7 @@ font-family: 'Bellefair', serif; */
     margin-block-start: 31rem;
   }
 
-  .crew .slide .content img {
+  .crew .slide img {
     width: fit-content;
     height: 53.2rem;
     margin-bottom: -3rem;
@@ -792,7 +792,7 @@ font-family: 'Bellefair', serif; */
 
   /* =====TECHNOLOGY======= */
 
-  .technology img {
+  .technology .slide img {
     width: fit-content;
     height: auto;
   }
@@ -800,4 +800,241 @@ font-family: 'Bellefair', serif; */
   .technology .nav-manual {
     margin-top: 40rem;
   }
+}
+
+@media (min-width: 1024px) {
+  /* =====GERAL======= */
+
+  section .wrapper {
+    padding-block: calc(var(--nav-height-mobile) + 11.8rem);
+    padding-inline: 16.5rem;
+  }
+
+  /* =====NAV======= */
+  .primary-navigation .logo {
+    margin-top: 4rem;
+  }
+
+  .primary-navigation .menu .nav-list {
+    margin: 0;
+    flex-direction: row;
+    gap: 4.8rem;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.3rem;
+
+    justify-content: center;
+  }
+
+  .primary-navigation .menu span {
+    display: inline;
+  }
+
+  .primary-navigation .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    inset: 4% 0 85% 40%;
+
+    transform: translateX(0%);
+  }
+
+  /* =====HOME======= */
+  .explorer .wrapper {
+    background: var(--bg-dk) url(/assets/bg-desk-home.png) no-repeat bottom /
+      cover fixed;
+
+    display: grid;
+    text-align: initial;
+    justify-content: center;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A" "B";
+  }
+
+  .explorer .col-a {
+    text-align: left;
+    width: 45rem;
+  }
+
+  .explore header h3 {
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+
+    letter-spacing: 5rem;
+  }
+
+  .explorer header h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15rem;
+    line-height: 17.2rem;
+  }
+
+  .explorer .content p {
+    margin-inline: 0;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+  }
+
+  .explorer .ball {
+    width: 27.4rem;
+    height: 27.4rem;
+    margin-inline-start: 38rem;
+
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    letter-spacing: 0.2rem;
+
+    transform: translateY(15rem);
+  }
+
+  /* =====DESTINATION======= */
+
+  .destination .wrapper {
+    background: var(--bg-dk) url(/assets/bg-desk-destination.png) no-repeat
+      bottom / cover fixed;
+  }
+
+  .destination .slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A" "B";
+  }
+
+  .destination .nav-manual {
+    width: auto;
+    margin-left: 72rem;
+    margin-block-start: 12rem;
+
+    gap: 3.5rem;
+  }
+
+  .destination .nav-manual * {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .destination header h3 {
+    margin-bottom: 9.7rem;
+
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.9rem;
+
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .destination .col-b {
+    text-align: left;
+    width: 44.5rem;
+    margin-inline-start: 15.7rem;
+    align-self: center;
+  }
+
+  .destination .content h2 {
+    font-size: 10rem;
+    line-height: 11.5rem;
+    padding-top: 3.7rem;
+    padding-bottom: 1.4rem;
+  }
+
+  .destination .content p {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    padding-bottom: 5.4rem;
+  }
+
+  .destination .slider img {
+    width: 44.5rem;
+    margin-top: 3.2rem;
+    margin-bottom: 8.7rem;
+  }
+
+  .info-destination {
+    display: flex;
+    gap: 7.9rem;
+    justify-content: start;
+  }
+
+  .destination .btn-moon:hover,
+  .destination .btn-mars:hover,
+  .destination .btn-europa:hover,
+  .destination .btn-titan:hover {
+    padding-bottom: 1.2rem;
+  }
+
+  #radio-moon:checked ~ .nav-manual .btn-moon,
+  #radio-mars:checked ~ .nav-manual .btn-mars,
+  #radio-europa:checked ~ .nav-manual .btn-europa,
+  #radio-titan:checked ~ .nav-manual .btn-titan {
+    padding-bottom: 1.2rem;
+  }
+
+  /* =====CREW======= */
+
+  .crew .wrapper {
+    background: var(--bg-dk) url(/assets/bg-desk-crew.png) no-repeat bottom /
+      cover fixed;
+  }
+
+  .crew .nav-manual {
+    width: auto;
+    margin-left: 0;
+    margin-block-start: 63rem;
+  }
+
+  .crew .slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A" "B";
+  }
+
+  .crew .slide .content {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .crew header h3 {
+    margin-bottom: 9.7rem;
+
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 3.9rem;
+
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .crew .slide .content h3 {
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    text-transform: uppercase;
+  }
+
+  .crew .slide .content h2 {
+    font-weight: 400;
+    font-size: 4.7rem;
+    line-height: 6.4rem;
+    text-transform: uppercase;
+  }
+
+  .crew .slide .content p {
+    width: 44.4rem;
+    margin: 0;
+    text-align: left;
+  }
+
+  .crew .slide img {
+  }
+
+  /* =====TECHNOLOGY======= */
 }
