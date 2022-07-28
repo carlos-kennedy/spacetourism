@@ -749,6 +749,19 @@ font-family: 'Bellefair', serif; */
     margin-block-start: 31rem;
   }
 
+  .crew .slide {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .crew .slide header {
+    order: 1;
+  }
+
+  .crew .slide .col-b{
+    order: -1;
+  }
+
   .crew .slide img {
     width: fit-content;
     height: 53.2rem;
@@ -756,8 +769,6 @@ font-family: 'Bellefair', serif; */
     padding-top: 4rem;
 
     border: none;
-
-    order: 1;
   }
 
   .crew .slide .content h3 {
@@ -1034,6 +1045,19 @@ font-family: 'Bellefair', serif; */
   }
 
   .crew .slide img {
+    height: 68.1rem;
+  }
+
+  .crew .slide .col-a .content {
+    margin-top: -50rem;
+  }
+
+  .crew .slide header {
+    order: 0;
+  }
+
+  .crew .slide .col-b{
+    order: 0;
   }
 
   /* =====TECHNOLOGY======= */
