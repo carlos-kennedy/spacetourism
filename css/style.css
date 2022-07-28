@@ -44,7 +44,7 @@ section p {
 
 section .wrapper {
   margin-inline: auto;
-  padding-block: var(--nav-height-mobile);
+  padding-block: calc(var(--nav-height-mobile) + 2.4rem);
   padding-inline: 2.4rem;
 
   display: flex;
@@ -57,10 +57,6 @@ a {
 }
 
 /* =====NAV======= */
-nav {
-  height: var(--nav-height-mobile);
-}
-
 .primary-navigation .wrapper {
   display: flex;
   justify-content: space-between;
@@ -135,16 +131,20 @@ nav {
   display: none;
 }
 
+.desk {
+  display: none;
+}
+
 /* =====HOME======= */
 
-.explorer .wrapper {
+.home .wrapper {
   background: var(--bg-dk) url(/assets/bg-space.png) no-repeat center / cover;
 
   display: flex;
   flex-direction: column;
 }
 
-.explorer h1 {
+.home h1 {
   margin-block: 1.6rem;
 
   font-family: "Bellefair", serif;
@@ -154,7 +154,7 @@ nav {
   color: var(--font-tl);
 }
 
-.explorer h3 {
+.home h3 {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -163,7 +163,7 @@ nav {
   color: var(--font-ph);
 }
 
-.explorer .content > p {
+.home .content > p {
   margin-bottom: 8.1rem;
 
   font-family: "Barlow", sans-serif;
@@ -278,7 +278,7 @@ nav {
 }
 
 .slider {
-  width: 100vw;
+  width: 100%;
   height: 100%;
 
   overflow: hidden;
@@ -321,6 +321,7 @@ nav {
 }
 
 .destination .nav-manual {
+  height: 2rem;
   width: 90%;
   margin-top: 25rem;
 
@@ -333,7 +334,6 @@ nav {
 }
 
 .destination .nav-manual * {
-  height: 2rem;
   font-family: "Barlow Condensed", sans-serif;
   font-size: 1.4rem;
   line-height: 1.7rem;
@@ -489,9 +489,8 @@ nav {
 /* =====TECHNOLOGY======= */
 
 .technology .wrapper {
-  padding-inline: 0;
   background: url(/assets/bg-technology.png) no-repeat center / cover fixed;
-
+  padding-inline: 0;
   text-align: center;
 }
 
@@ -511,8 +510,6 @@ nav {
 }
 
 .technology img {
-  margin-left: -2.4rem;
-
   width: 37.7rem;
   padding-top: 3.4rem;
   padding-bottom: 10rem;
@@ -552,7 +549,7 @@ nav {
 }
 
 .technology .nav-manual {
-  width: 100%;
+  width: 95%;
   margin-block-start: 24rem;
   position: absolute;
   display: flex;
@@ -605,10 +602,6 @@ nav {
   color: var(--bg-dk);
 }
 
-/* font-family: 'Barlow', sans-serif;
-font-family: 'Barlow Condensed', sans-serif;
-font-family: 'Bellefair', serif; */
-
 /* ==large-screen-smartphone */
 @media (min-width: 390px) {
   .technology img {
@@ -625,14 +618,33 @@ font-family: 'Bellefair', serif; */
 @media (min-width: 768px) {
   /* =====GERAL======= */
 
-  nav {
-    height: var(--nav-height);
-  }
-
   section .wrapper {
     padding-block: calc(var(--nav-height) + 4rem);
 
     padding-inline: 3.9rem;
+  }
+
+  .menu .nav-list li a:hover::after,
+  .menu .nav-list li a::after {
+    content: "";
+    width: 0%;
+    height: 0.3rem;
+    background: var(--font-tl);
+    bottom: -3.5rem;
+    left: -0.2rem;
+    position: relative;
+    display: block;
+
+    transition: width 0.9s;
+  }
+
+  .menu .nav-list li a:hover::after {
+    opacity: 0.5;
+  }
+
+  .menu .nav-list li a.active::after,
+  .menu .nav-list li a:hover::after {
+    width: 100%;
   }
 
   .destination header h3,
@@ -647,14 +659,14 @@ font-family: 'Bellefair', serif; */
     width: min(59.2rem, 100%);
   }
 
-  .explorer h1 {
+  .home h1 {
     font-family: "Bellefair", serif;
     font-weight: 400;
     font-size: 15rem;
     line-height: 15rem;
   }
 
-  .explorer h3 {
+  .home h3 {
     font-family: "Barlow Condensed";
     font-weight: 400;
     font-size: 2rem;
@@ -663,7 +675,7 @@ font-family: 'Bellefair', serif; */
     letter-spacing: 0.3rem;
   }
 
-  .explorer .content > p {
+  .home .content > p {
     margin-bottom: 15.6rem;
 
     font-style: normal;
@@ -758,7 +770,7 @@ font-family: 'Bellefair', serif; */
     order: 1;
   }
 
-  .crew .slide .col-b{
+  .crew .slide .col-b {
     order: -1;
   }
 
@@ -803,12 +815,17 @@ font-family: 'Bellefair', serif; */
 
   /* =====TECHNOLOGY======= */
 
+  .technology .wrapper {
+    padding-inline: 0;
+  }
+
   .technology .slide img {
     width: fit-content;
     height: auto;
   }
 
   .technology .nav-manual {
+    width: 100%;
     margin-top: 40rem;
   }
 }
@@ -853,7 +870,7 @@ font-family: 'Bellefair', serif; */
   }
 
   /* =====HOME======= */
-  .explorer .wrapper {
+  .home .wrapper {
     background: var(--bg-dk) url(/assets/bg-desk-home.png) no-repeat bottom /
       cover fixed;
 
@@ -865,7 +882,7 @@ font-family: 'Bellefair', serif; */
     grid-template-areas: "A" "B";
   }
 
-  .explorer .col-a {
+  .home .col-a {
     text-align: left;
     width: 45rem;
   }
@@ -878,21 +895,21 @@ font-family: 'Bellefair', serif; */
     letter-spacing: 5rem;
   }
 
-  .explorer header h1 {
+  .home header h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 15rem;
     line-height: 17.2rem;
   }
 
-  .explorer .content p {
+  .home .content p {
     margin-inline: 0;
     margin-bottom: 0;
     font-size: 1.8rem;
     line-height: 3.2rem;
   }
 
-  .explorer .ball {
+  .home .ball {
     width: 27.4rem;
     height: 27.4rem;
     margin-inline-start: 38rem;
@@ -918,8 +935,8 @@ font-family: 'Bellefair', serif; */
   }
 
   .destination .nav-manual {
-    width: auto;
-    margin-left: 72rem;
+    justify-content: end;
+    width: 65%;
     margin-block-start: 12rem;
 
     gap: 3.5rem;
@@ -945,8 +962,8 @@ font-family: 'Bellefair', serif; */
 
   .destination .col-b {
     text-align: left;
-    width: 44.5rem;
-    margin-inline-start: 15.7rem;
+    width: 44rem;
+    margin-inline-start: 12.7rem;
     align-self: center;
   }
 
@@ -1056,9 +1073,7 @@ font-family: 'Bellefair', serif; */
     order: 0;
   }
 
-  .crew .slide .col-b{
+  .crew .slide .col-b {
     order: 0;
   }
-
-  /* =====TECHNOLOGY======= */
 }

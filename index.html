@@ -51,10 +51,10 @@
 
             <div class="menu" data-visible="false">
                 <ul class="nav-list">
-                    <li> <a href="#home"> <span>00</span> home</a></li>
-                    <li><a href="#destination"> <span>01</span> destination</a></li>
-                    <li><a href="#crew"> <span>02</span> crew</a></li>
-                    <li><a href="#technology"> <span>03</span> technology</a></li>
+                    <li><a class="" href="#home"> <span>00</span> home</a></li>
+                    <li><a class="" href="#destination"> <span>01</span> destination</a></li>
+                    <li><a class="" href="#crew"> <span>02</span> crew</a></li>
+                    <li><a class="" href="#technology"> <span>03</span> technology</a></li>
                 </ul>
             </div>
 
@@ -63,7 +63,7 @@
 
     <main>
 
-        <section id="home" class="explorer">
+        <section id="home" class="home">
             <div class="wrapper">
 
                 <div class="col-a">
@@ -88,7 +88,6 @@
                 <div class="col-b">
                     <a class="ball" href="#destination">EXPLORER</a>
                 </div>
-
             </div>
         </section>
 
@@ -262,7 +261,7 @@
                         <input type="radio" name="radio-btn" id="radio-pilot">
                         <input type="radio" name="radio-btn" id="radio-flight-engineer">
 
-                        <div class="slide first">
+                        <article class="slide first">
                             <header>
                                 <h3><span class="number">02</span> Meet your crew </h3>
                             </header>
@@ -281,12 +280,9 @@
                                         space for the third time as commander of Crew Dragon Demo-2.</p>
                                 </div>
                             </div>
+                        </article>
 
-
-
-                        </div>
-
-                        <div class="slide">
+                        <article class="slide">
                             <header>
                                 <h3><span class="number">02</span> Meet your crew </h3>
                             </header>
@@ -308,11 +304,9 @@
                                         tourist.</p>
                                 </div>
                             </div>
+                        </article>
 
-
-                        </div>
-
-                        <div class="slide">
+                        <article class="slide">
 
                             <header>
                                 <h3><span class="number">02</span> Meet your crew </h3>
@@ -335,12 +329,9 @@
 
                                 </div>
                             </div>
+                        </article>
 
-
-                        </div>
-
-                        <div class="slide">
-
+                        <article class="slide">
                             <header>
                                 <h3><span class="number">02</span> Meet your crew </h3>
                             </header>
@@ -358,13 +349,9 @@
                                         space tourist, the first self-funded woman to fly to the ISS, and the first
                                         Iranian
                                         in space.</p>
-
                                 </div>
                             </div>
-
-
-
-                        </div>
+                        </article>
 
                         <div class="nav-manual">
                             <label for="radio-commander" class="btn-commander">
@@ -391,16 +378,19 @@
                         <input type="radio" name="radio-btn" id="radio-spaceport">
                         <input type="radio" name="radio-btn" id="radio-capsule">
 
-                        <div class="slide first">
+                        <article class="slide first">
                             <header>
                                 <h3><span class="number">03</span> space launch 101</h3>
                             </header>
 
-                            <div class="col-a">
-                                <img src="assets/launch-vehicle.png" alt="imagem do lançamento do foguete" />
+                            <div class="col-b">
+
+                                <img class="mobile" src="assets/launch-vehicle.png" alt="Imagem do lançamento do foguete" />
+
+                                <img class="desk" src="assets/rotest1.png" alt="Imagem de lançamento do foguete" />
                             </div>
 
-                            <div class="col-b">
+                            <div class="col-a">
                                 <div class="content">
                                     <h3>the terminology...</h3>
                                     <h2>launch vehicle</h2>
@@ -411,43 +401,53 @@
                                         quite an awe-inspiring sight on the launch pad!</p>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
-                        <div class="slide">
+                        <article class="slide">
                             <header>
                                 <h3><span class="number">03</span> space launch 101</h3>
-                                <img src="assets/space-port.png" alt="imagem do lançamento do foguete">
                             </header>
 
-                            <div class="content">
-                                <h3>the terminology...</h3>
-                                <h2>spaceport</h2>
-                                <p> A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by
-                                    analogy to the seaport for ships or
-                                    airport for aircraft. Based in the famous Cape Canaveral, our spaceport is
-                                    ideally
-                                    situated to take advantage of the
-                                    Earth’s rotation for launch.</p>
+                            <div class="col-b">
+                                <img src="assets/spaceport.png" alt="imagem do lançamento do foguete">
                             </div>
-                        </div>
 
-                        <div class="slide">
+                            <div class="col-a">
+                                <div class="content">
+                                    <h3>the terminology...</h3>
+                                    <h2>spaceport</h2>
+                                    <p> A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by
+                                        analogy to the seaport for ships or
+                                        airport for aircraft. Based in the famous Cape Canaveral, our spaceport is
+                                        ideally
+                                        situated to take advantage of the
+                                        Earth’s rotation for launch.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="slide">
                             <header>
                                 <h3><span class="number">03</span> space launch 101</h3>
-                                <img src="assets/space-capsule.png" alt="imagem do lançamento do foguete">
                             </header>
 
-                            <div class="content">
-                                <h3>the terminology...</h3>
-                                <h2>Space capsule</h2>
-                                <p> A space capsule is an often-crewed spacecraft that uses a blunt-body reentry
-                                    capsule
-                                    to reenter the Earth's atmosphere
-                                    without wings. Our capsule is where you'll spend your time during the flight. It
-                                    includes a space gym, cinema, and
-                                    plenty of other activities to keep you entertained.</p>
+                            <div class="col-b">
+                                <img src="assets/spacecapsule.png" alt="imagem do lançamento do foguete">
                             </div>
-                        </div>
+
+                            <div class="col-a">
+                                <div class="content">
+                                    <h3>the terminology...</h3>
+                                    <h2>Space capsule</h2>
+                                    <p> A space capsule is an often-crewed spacecraft that uses a blunt-body reentry
+                                        capsule
+                                        to reenter the Earth's atmosphere
+                                        without wings. Our capsule is where you'll spend your time during the flight. It
+                                        includes a space gym, cinema, and
+                                        plenty of other activities to keep you entertained.</p>
+                                </div>
+                            </div>
+                        </article>
 
                         <div class="nav-manual">
                             <label for="radio-vehicle-lauch" class="btn-vehicle-lauch">1
