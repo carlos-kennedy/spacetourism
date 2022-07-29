@@ -4,13 +4,14 @@ const primaryNav = document.querySelector(".menu");
 const navButtonOpen = document.querySelector(".open-menu-mobile");
 const navButtonClose = document.querySelector(".close-menu-mobile");
 
+onScrollEvents();
 function onScrollEvents() {
+  buttonsMenu();
   activateMenuAtCurrentSection(home);
   activateMenuAtCurrentSection(destination);
   activateMenuAtCurrentSection(crew);
   activateMenuAtCurrentSection(technology);
 }
-onScrollEvents();
 
 function buttonsMenu() {
   // open
@@ -48,7 +49,6 @@ function buttonsMenu() {
     }
   });
 }
-buttonsMenu();
 
 function activateMenuAtCurrentSection(section) {
   const targetline = scrollY + innerHeight / 2;
