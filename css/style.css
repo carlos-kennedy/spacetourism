@@ -202,7 +202,7 @@ a {
 /* =====DESTINATION======= */
 
 .destination .wrapper {
-  background: url(./assets/sliders-bg.png) no-repeat center / cover fixed;
+  background: url(../assets/sliders-bg.png) no-repeat center / cover fixed;
 }
 
 .destination header h3 {
@@ -367,7 +367,7 @@ a {
 /* =====CREW======= */
 
 .crew .wrapper {
-  background: url(./assets/bg-crew.png) no-repeat center / cover fixed;
+  background: url(../assets/bg-crew.png) no-repeat center / cover fixed;
 }
 
 .crew .number {
@@ -489,7 +489,7 @@ a {
 /* =====TECHNOLOGY======= */
 
 .technology .wrapper {
-  background: url(./assets/bg-technology.png) no-repeat center / cover fixed;
+  background: url(../assets/bg-technology.png) no-repeat center / cover fixed;
   padding-inline: 0;
   text-align: center;
 }
@@ -884,7 +884,7 @@ a {
 
   /* =====HOME======= */
   .home .wrapper {
-    background: var(--bg-dk) url(./assets/bg-desk-home.png) no-repeat bottom /
+    background: var(--bg-dk) url(../assets/bg-desk-home.png) no-repeat bottom /
       cover fixed;
 
     display: grid;
@@ -937,7 +937,7 @@ a {
   /* =====DESTINATION======= */
 
   .destination .wrapper {
-    background: var(--bg-dk) url(./assets/bg-desk-destination.png) no-repeat
+    background: var(--bg-dk) url(../assets/bg-desk-destination.png) no-repeat
       bottom / cover fixed;
   }
 
@@ -1022,7 +1022,7 @@ a {
   /* =====CREW======= */
 
   .crew .wrapper {
-    background: var(--bg-dk) url(./assets/bg-desk-crew.png) no-repeat bottom /
+    background: var(--bg-dk) url(../assets/bg-desk-crew.png) no-repeat bottom /
       cover fixed;
   }
 
