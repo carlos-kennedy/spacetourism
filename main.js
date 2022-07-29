@@ -1,4 +1,5 @@
 window.addEventListener("scroll", onScrollEvents);
+window.addEventListener("click", buttonsMenu);
 
 const primaryNav = document.querySelector(".menu");
 const navButtonOpen = document.querySelector(".open-menu-mobile");
