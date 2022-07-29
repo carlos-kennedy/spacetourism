@@ -19,8 +19,6 @@ function buttonsMenu() {
   navButtonOpen.addEventListener("click", () => {
     const visibility = primaryNav.getAttribute("data-visible");
 
-    primaryNav.setAttribute("data-visible", false);
-
     navButtonOpen.classList.add("unactive");
     navButtonOpen.setAttribute("aria-expanded", false);
 
