@@ -6,13 +6,13 @@ const navButtonOpen = document.querySelector(".open-menu-mobile");
 const navButtonClose = document.querySelector(".close-menu-mobile");
 
 onScrollEvents();
-
 function onScrollEvents() {
   buttonsMenu();
   activateMenuAtCurrentSection(home);
   activateMenuAtCurrentSection(destination);
   activateMenuAtCurrentSection(crew);
   activateMenuAtCurrentSection(technology);
+  return;
 }
 
 function activateMenuAtCurrentSection(section) {
