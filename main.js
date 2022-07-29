@@ -12,37 +12,12 @@ function onScrollEvents() {
   activateMenuAtCurrentSection(destination);
   activateMenuAtCurrentSection(crew);
   activateMenuAtCurrentSection(technology);
-  return;
 }
 
-function activateMenuAtCurrentSection(section) {
-  const targetline = scrollY + innerHeight / 2;
-  const sectionTop = section.offsetTop;
-  const sectionHeight = section.offsetHeight;
-  const sectionTopReachOrPassedTargetLine = targetline >= sectionTop;
-  const sectionEndsAt = sectionTop + sectionHeight;
-
-  const sectionEndPassedTargetline = sectionEndsAt <= targetline;
-
-  const sectionBoundaries =
-    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetline;
-
-  const sectionId = section.getAttribute("id");
-  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`);
-
-  menuElement.classList.remove("active");
-  if (sectionBoundaries) {
-    menuElement.classList.add("active");
-  }
-}
-
-navButtonOpen.classList.remove("unactive");
 function buttonsMenu() {
   // open
   navButtonOpen.addEventListener("click", () => {
     const visibility = primaryNav.getAttribute("data-visible");
-
-    primaryNav.setAttribute("data-visible", false);
 
     navButtonOpen.classList.add("unactive");
     navButtonOpen.setAttribute("aria-expanded", false);
@@ -72,5 +47,25 @@ function buttonsMenu() {
       navButtonClose.setAttribute("aria-expanded", false);
     }
   });
-  return;
+}
+
+function activateMenuAtCurrentSection(section) {
+  const targetline = scrollY + innerHeight / 2;
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
+  const sectionTopReachOrPassedTargetLine = targetline >= sectionTop;
+  const sectionEndsAt = sectionTop + sectionHeight;
+
+  const sectionEndPassedTargetline = sectionEndsAt <= targetline;
+
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetline;
+
+  const sectionId = section.getAttribute("id");
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`);
+
+  menuElement.classList.remove("active");
+  if (sectionBoundaries) {
+    menuElement.classList.add("active");
+  }
 }
